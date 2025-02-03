@@ -8,6 +8,3 @@ A web app built with React for managing a digital library. Users can add, delete
 - Add a new book to the library using a form.
 - Filter books by title or genre using a search bar.
 
-## Project Setup
-
-To run this project locally:
