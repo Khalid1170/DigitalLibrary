@@ -1,38 +1,92 @@
-.App {
+/* Global styling for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Center text for headings and content */
+h1, h2, h3, p {
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Styling for the SearchBar */
+.searchbar {
+  margin-top: 3%;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+input[type="text"] {
+ 
+  max-width: 700px;
+  font-size: 20px;
+  padding: 10px;
+  margin-bottom: 20px; 
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Styling for the 'Add Book' button */
+button {
+  font-size: 20px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #4285F4;
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #357AE8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Styling for Book Display section */
+.book-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Individual book card styling */
+.book-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;  /* Align text to the left inside the card */
+  box-sizing: border-box;
+}
+
+.book-card h3 {
+  font-size: 1.2em;
+}
+
+.book-card p {
+  font-size: 1em;
+  margin: 5px 0;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1200px) {
+  .book-card {
+    width: 30%;  /* 3 columns for medium-sized screens */
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 800px) {
+  .book-card {
+    width: 45%;  /* 2 columns for smaller screens */
+  }
+}
+
+@media (max-width: 500px) {
+  .book-card {
+    width: 90%;  /* 1 column for very small screens */
   }
 }
